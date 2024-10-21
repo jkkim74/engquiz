@@ -41,11 +41,10 @@ interface OpenAiService {
 // Retrofit 인스턴스 설정
 object RetrofitInstance {
     private const val BASE_URL = "https://api.openai.com/"
-
     private val client = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer ")  // OpenAI API 키 입력
+//                .addHeader("Authorization", "Bearer ")  // OpenAI API 키 입력
                 .build()
             chain.proceed(request)
         }.build()
