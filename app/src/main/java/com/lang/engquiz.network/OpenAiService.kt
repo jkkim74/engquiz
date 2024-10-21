@@ -45,7 +45,7 @@ object RetrofitInstance {
     private val client = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
-                .addHeader("Authorization", "Bearer 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")  // OpenAI API 키 입력
+                .addHeader("Authorization", "Bearer ")  // OpenAI API 키 입력
                 .build()
             chain.proceed(request)
         }.build()
