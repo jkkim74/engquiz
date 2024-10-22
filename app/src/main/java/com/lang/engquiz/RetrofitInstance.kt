@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
     private val retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("http://192.168.1.100:8080")  // Spring Boot 서버 IP 주소
+            .baseUrl("http://192.168.219.108:8080")  // Spring Boot 서버 IP 주소
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

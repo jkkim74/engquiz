@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface QuizApi {
 
-    @GET("/api/quiz/generate")
+    @GET("/api/chatgpt/quiz")
     suspend fun getQuiz(): Response<String>
 
     @POST("/api/quiz/check")
